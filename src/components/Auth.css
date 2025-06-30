@@ -1,0 +1,160 @@
+/* ===== Page container ===== */
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: black;
+}
+
+/* ===== Aurora in background ===== */
+.aurora-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* ===== Foreground content ===== */
+.auth-foreground {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.credhex-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* ===== Auth box ===== */
+.auth-container {
+  background-color: rgba(20, 20, 30, 0.98);
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+  color: white;
+  box-sizing: border-box;
+}
+
+/* ===== Inputs (email & password) ===== */
+.auth-container input {
+  display: block;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  margin: 12px 0;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: #1f1f2e;
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container input::placeholder {
+  color: #bbb;
+  font-size: 14px;
+}
+
+.auth-container input:focus {
+  outline: none;
+  border-color: #7b9fff;
+  box-shadow: 0 0 0 3px rgba(123, 159, 255, 0.2);
+}
+
+/* ===== Button ===== */
+.auth-container button {
+  display: block;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #5e60ce;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #3f45c0;
+}
+
+/* ===== Toggle Text ===== */
+.toggle-text {
+  margin-top: 14px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #a2d2ff;
+  text-decoration: underline;
+}
+
+/* ===== Error Message ===== */
+.error {
+  color: #ff6b6b;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+/* ===== Auth box (enlarged) ===== */
+.auth-container {
+  background-color: rgba(20, 20, 30, 0.98);
+  padding: 50px 40px; /* Increased padding */
+  border-radius: 20px;
+  width: 420px; /* Increased width from 320px */
+  text-align: center;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.6);
+  color: white;
+  box-sizing: border-box;
+}
+
+
+
+@media (max-width: 480px) {
+  .credhex-title {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+
+  .auth-container {
+    width: 90vw; /* Use relative width for smaller screens */
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .auth-container input,
+  .auth-container button {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .toggle-text {
+    font-size: 13px;
+  }
+
+  .error {
+    font-size: 13px;
+  }
+
+  .auth-foreground {
+    padding-top: 60px;
+  }
+}
